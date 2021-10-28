@@ -1,6 +1,8 @@
 # copy this to root directory of data and ./resample_delete.sh
 # ffmpeg required
 # https://unix.stackexchange.com/questions/103920/parallelize-a-bash-for-loop
+# if you want to change the suffix '-8k.wav' into '.wav', then:
+# find . -name '*-8k.wav' -exec bash -c 'mv $0 ${0/-8k/}' {} \;
 
 open_sem(){
     mkfifo pipe-$$
